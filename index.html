@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geethik Kancharla | Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2A2F4F;
+            --accent: #917FB3;
+            --dark: #1E1E24;
+            --light: #F7F5FB;
+            --gradient: linear-gradient(135deg, #2A2F4F 0%, #917FB3 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: -50px;
+        }
+
+        /* Card Animation */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Skill Bubbles */
+        .skill-bubble {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-bubble:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        /* Gradient Headings */
+        h2 {
+            font-size: 2.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 3rem 0 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        /* Social Icons */
+        .social-icons a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: var(--light);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="animate-float">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Geethik Kancharla</h1>
+            <p style="font-size: 1.4rem; opacity: 0.9;">Data Analyst | AI Enthusiast | Cloud Certified Professional</p>
+        </div>
+        <div class="social-icons" style="margin-top: 2rem;">
+            <a href="https://linkedin.com/in/geethikkancharla/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="[GITHUB]" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="[RESUME]" download><i class="fas fa-file-pdf"></i></a>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+        <!-- Skills Section -->
+        <section>
+            <h2>Technical Expertise</h2>
+            <div class="card">
+                <div style="margin: 1rem 0;">
+                    <span class="skill-bubble">Python (Pandas, NumPy)</span>
+                    <span class="skill-bubble">SQL & NoSQL</span>
+                    <span class="skill-bubble">Tableau & Power BI</span>
+                    <span class="skill-bubble">AWS & Azure</span>
+                    <span class="skill-bubble">Machine Learning</span>
+                    <span class="skill-bubble">JavaScript/React</span>
+                    <span class="skill-bubble">Data Modeling</span>
+                    <span class="skill-bubble">ETL Pipelines</span>
+                    <span class="skill-bubble">Statistical Analysis</span>
+                    <span class="skill-bubble">Cloud Computing</span>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Certifications</h3>
+                    <div class="skill-bubble" style="background: var(--primary);">AWS Certified Cloud Practitioner</div>
+                    <div class="skill-bubble" style="background: var(--primary);">Microsoft Azure AI Fundamentals</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                <!-- ASISTMI Solutions -->
+                <div class="timeline-item card">
+                    <h3 style="color: var(--primary);">ASISTMI Solutions Pvt Ltd.</h3>
+                    <p style="color: var(--accent); margin: 0.5rem 0;">Data Engineer Intern | Sep 2021 - Aug 2022</p>
+                    <ul style="padding-left: 2rem; margin-top: 1rem;">
+                        <li>🚀 Engineered ETL pipelines using SQL and DBMS, boosting query performance by 20%</li>
+                        <li>💡 Developed AngularJS/Node.js components enhancing user interaction for 500+ enterprise clients</li>
+                        <li>📉 Reduced data latency by 20% through optimized storage architecture</li>
+                        <li>🔗 Integrated AWS RedShift for cloud-based analytics workflows</li>
+                    </ul>
+                </div>
+
+                <!-- GoMechanic -->
+                <div class="timeline-item card">
+                    <h3 style="color: var(--primary);">GoMechanic</h3>
+                    <p style="color: var(--accent); margin: 0.5rem 0;">Data Analyst Intern | Mar 2021 - May 2021</p>
+                    <ul style="padding-left: 2rem; margin-top: 1rem;">
+                        <li>📈 Conducted customer sentiment analysis improving retention by 18%</li>
+                        <li>📦 Optimized inventory management system reducing discrepancies by 15%</li>
+                        <li>⚡ Automated service workflows cutting response time by 25%</li>
+                        <li>📊 Created Power BI dashboards for real-time operational monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Projects -->
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <!-- COVID-19 Dashboard -->
+                <div class="card">
+                    <h3 style="color: var(--primary);">WHO COVID-19 Data Analysis</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="skill-bubble">Tableau</span>
+                        <span class="skill-bubble">SQL</span>
+                        <span class="skill-bubble">Data Modeling</span>
+                    </div>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>📍 Identified high-risk regions with 12% faster detection using spatial analysis</li>
+                        <li>📉 Reduced vaccine delivery delays by 15% through route optimization</li>
+                        <li>📈 Increased vaccination coverage by 10% via priority allocation strategy</li>
+                    </ul>
+                  
+                </div>
+
+                <!-- Credit Risk Model -->
+                <div class="card">
+                    <h3 style="color: var(--primary);">Credit Risk Analysis</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="skill-bubble">XGBoost</span>
+                        <span class="skill-bubble">Neural Networks</span>
+                        <span class="skill-bubble">Python</span>
+                    </div>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>🎯 Achieved 95% prediction accuracy using 13-year historical data</li>
+                        <li>📉 Reduced loan defaults by 20% through dynamic risk thresholds</li>
+                        <li>🤖 Implemented neural network ensemble for feature importance analysis</li>
+                    </ul>
+                    
+                </div>
+
+                <!-- Airline Cost Analysis -->
+                <div class="card">
+                    <h3 style="color: var(--primary);">Airline Cost Optimization</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="skill-bubble">STATA</span>
+                        <span class="skill-bubble">Regression</span>
+                        <span class="skill-bubble">Time Series</span>
+                    </div>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>✈️ Analyzed 14-year operational data using fixed effects modeling</li>
+                        <li>📊 Identified fuel costs as primary driver (p < 0.01 significance)</li>
+                        <li>💡 Proposed strategies reducing operational costs by 12%</li>
+                    </ul>
+                   
+                </div>
+
+                <!-- Game Development -->
+                <div class="card">
+                    <h3 style="color: var(--primary);">Multiplayer Strategy Game</h3>
+                    <div style="margin: 1rem 0;">
+                        <span class="skill-bubble">JavaScript</span>
+                        <span class="skill-bubble">HTML5</span>
+                        <span class="skill-bubble">CSS3</span>
+                    </div>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>🎮 Developed turn-based combat system with AI opponents</li>
+                        <li>⚡ Implemented session persistence using LocalStorage</li>
+                        <li>📱 Created responsive UI with CSS Grid and Flexbox</li>
+                    </ul>
+                  
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3 style="color: var(--primary);">University of Texas at Dallas</h3>
+                    <p style="color: var(--accent);">MS in Business Analytics & AI</p>
+                    <ul style="margin-top: 1rem;">
+                        <li>📅 Jan 2023 - Dec 2024 (Expected)</li>
+                        <li>🏅 GPA: 3.69/4.0</li>
+                        <li>📚 Relevant Coursework: Machine Learning, Cloud Architecture, Big Data Analytics</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary);">SRM Institute of Science</h3>
+                    <p style="color: var(--accent);">BTech in Mechanical Engineering</p>
+                    <ul style="margin-top: 1rem;">
+                        <li>📅 Jun 2017 - Jul 2021</li>
+                        <li>🏅 GPA: 3.1/4.0</li>
+                        <li>📚 Relevant Coursework: Statistics, Computational Methods, IoT Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: var(--gradient); color: white; text-align: center; padding: 3rem; margin-top: 5rem;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h3 style="margin-bottom: 1.5rem;">Let's Connect!</h3>
+            <p style="margin-bottom: 1rem;">
+                📧 geethikkancharla26@gmail.com<br>
+                📱 +1 (469) 432-0036
+            </p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/geethikkancharla/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="[GITHUB]" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="[MEDIUM]" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.8;">&copy; 2023 Geethik Kancharla | Data-Driven Solutions Architect</p>
+        </div>
+    </footer>
+</body>
+</html>
