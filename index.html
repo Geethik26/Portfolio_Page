@@ -1,335 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geethik Kancharla | Data Analyst</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2A2F4F;
-            --accent: #917FB3;
-            --dark: #1E1E24;
-            --light: #F7F5FB;
-            --gradient: linear-gradient(135deg, #2A2F4F 0%, #917FB3 100%);
-        }
+  <meta charset="UTF-8" />
+  <meta name="description" content="Portfolio of Geethik Kancharla - Data Wizard, AI Enthusiast, Cloud Certified Professional" />
+  <meta name="keywords" content="Data Analyst, Machine Learning, Cloud, Portfolio" />
+  <meta name="author" content="Geethik Kancharla" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geethik Kancharla | Data Analyst</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-        body {
-            background: var(--light);
-            color: var(--dark);
-            line-height: 1.8;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
-        /* Header Styles */
-        header {
-            background: var(--gradient);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            margin-bottom: -50px;
-        }
+  <style>
+    :root {
+      --primary: #2A2F4F;
+      --accent: #917FB3;
+      --dark: #1E1E24;
+      --light: #F7F5FB;
+      --gradient: linear-gradient(135deg, #2A2F4F 0%, #917FB3 100%);
+      --transition-speed: 0.4s;
+    }
 
-        /* Card Animation */
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transform: translateY(0);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.8;
+    }
 
-        /* Skill Bubbles */
-        .skill-bubble {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            margin: 0.5rem;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
+    /* Header / Hero Section */
+    header {
+      background: var(--gradient);
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      margin-bottom: -50px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .skill-bubble:hover {
-            background: var(--primary);
-            transform: scale(1.05);
-        }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
 
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-            border-left: 3px solid var(--accent);
-        }
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+    }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding-left: 30px;
-        }
+    /* Animate Float for Header Elements */
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -40px;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            background: var(--accent);
-            border: 3px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
 
-        /* Project Grid */
-        .project-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        }
+    /* Social Icons in Header */
+    .social-icons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
 
-        /* Gradient Headings */
-        h2 {
-            font-size: 2.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 3rem 0 2rem;
-            position: relative;
-            display: inline-block;
-        }
+    .social-icons a {
+      color: #fff;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50%;
-            height: 3px;
-            background: var(--gradient);
-        }
+    .social-icons a:hover,
+    .social-icons a:focus {
+      transform: translateY(-4px) scale(1.1);
+      color: #fff;
+      outline: none;
+    }
 
-        /* Social Icons */
-        .social-icons a {
-            color: white;
-            margin: 0 1rem;
-            font-size: 1.8rem;
-            transition: all 0.3s ease;
-        }
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-        .social-icons a:hover {
-            transform: translateY(-5px) scale(1.1);
-            color: var(--light);
-        }
+    /* Section Titles (Gradient text) */
+    h2 {
+      font-size: 2.2rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 3rem 0 2rem;
+      position: relative;
+      display: inline-block;
+    }
 
-        /* Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background: var(--gradient);
+    }
 
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-    </style>
+    /* Card Styles */
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(0);
+      transition: transform var(--transition-speed) cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  box-shadow var(--transition-speed) ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Skill Bubbles */
+    .skill-bubble {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      margin: 0.4rem 0.4rem 0 0;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .skill-bubble:hover {
+      background: var(--primary);
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+      border-left: 3px solid var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -42px;
+      top: 10px;
+      width: 18px;
+      height: 18px;
+      background: var(--accent);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Project Grid */
+    .project-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Footer */
+    footer {
+      background: var(--gradient);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    footer h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    footer p {
+      margin-bottom: 1rem;
+    }
+
+    footer .social-icons {
+      margin: 1rem 0 2rem;
+      gap: 1.5rem;
+    }
+
+    footer .social-icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    footer .social-icons a:hover,
+    footer .social-icons a:focus {
+      color: #f1f1f1;
+      transform: translateY(-4px);
+    }
+
+    /* Responsive Typography */
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="animate-float">
-            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Geethik Kancharla</h1>
-            <p style="font-size: 1.4rem; opacity: 0.9;">Data Analyst | AI Enthusiast | Cloud Certified Professional</p>
-        </div>
-        <div class="social-icons" style="margin-top: 2rem;">
-            <a href="https://linkedin.com/in/geethikkancharla/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="[GITHUB]" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="[RESUME]" download><i class="fas fa-file-pdf"></i></a>
-        </div>
-    </header>
-
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-        <!-- Skills Section -->
-        <section>
-            <h2>Technical Expertise</h2>
-            <div class="card">
-                <div style="margin: 1rem 0;">
-                    <span class="skill-bubble">Python (Pandas, NumPy)</span>
-                    <span class="skill-bubble">SQL & NoSQL</span>
-                    <span class="skill-bubble">Tableau & Power BI</span>
-                    <span class="skill-bubble">AWS & Azure</span>
-                    <span class="skill-bubble">Machine Learning</span>
-                    <span class="skill-bubble">JavaScript/React</span>
-                    <span class="skill-bubble">Data Modeling</span>
-                    <span class="skill-bubble">ETL Pipelines</span>
-                    <span class="skill-bubble">Statistical Analysis</span>
-                    <span class="skill-bubble">Cloud Computing</span>
-                </div>
-                <div style="margin-top: 2rem;">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Certifications</h3>
-                    <div class="skill-bubble" style="background: var(--primary);">AWS Certified Cloud Practitioner</div>
-                    <div class="skill-bubble" style="background: var(--primary);">Microsoft Azure AI Fundamentals</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience -->
-        <section>
-            <h2>Professional Journey</h2>
-            <div class="timeline">
-                <!-- ASISTMI Solutions -->
-                <div class="timeline-item card">
-                    <h3 style="color: var(--primary);">ASISTMI Solutions Pvt Ltd.</h3>
-                    <p style="color: var(--accent); margin: 0.5rem 0;">Data Engineer Intern | Sep 2021 - Aug 2022</p>
-                    <ul style="padding-left: 2rem; margin-top: 1rem;">
-                        <li>🚀 Engineered ETL pipelines using SQL and DBMS, boosting query performance by 20%</li>
-                        <li>💡 Developed AngularJS/Node.js components enhancing user interaction for 500+ enterprise clients</li>
-                        <li>📉 Reduced data latency by 20% through optimized storage architecture</li>
-                        <li>🔗 Integrated AWS RedShift for cloud-based analytics workflows</li>
-                    </ul>
-                </div>
-
-                <!-- GoMechanic -->
-                <div class="timeline-item card">
-                    <h3 style="color: var(--primary);">GoMechanic</h3>
-                    <p style="color: var(--accent); margin: 0.5rem 0;">Data Analyst Intern | Mar 2021 - May 2021</p>
-                    <ul style="padding-left: 2rem; margin-top: 1rem;">
-                        <li>📈 Conducted customer sentiment analysis improving retention by 18%</li>
-                        <li>📦 Optimized inventory management system reducing discrepancies by 15%</li>
-                        <li>⚡ Automated service workflows cutting response time by 25%</li>
-                        <li>📊 Created Power BI dashboards for real-time operational monitoring</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Academic Projects -->
-        <section>
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <!-- COVID-19 Dashboard -->
-                <div class="card">
-                    <h3 style="color: var(--primary);">WHO COVID-19 Data Analysis</h3>
-                    <div style="margin: 1rem 0;">
-                        <span class="skill-bubble">Tableau</span>
-                        <span class="skill-bubble">SQL</span>
-                        <span class="skill-bubble">Data Modeling</span>
-                    </div>
-                    <ul style="padding-left: 1.5rem;">
-                        <li>📍 Identified high-risk regions with 12% faster detection using spatial analysis</li>
-                        <li>📉 Reduced vaccine delivery delays by 15% through route optimization</li>
-                        <li>📈 Increased vaccination coverage by 10% via priority allocation strategy</li>
-                    </ul>
-                  
-                </div>
-
-                <!-- Credit Risk Model -->
-                <div class="card">
-                    <h3 style="color: var(--primary);">Credit Risk Analysis</h3>
-                    <div style="margin: 1rem 0;">
-                        <span class="skill-bubble">XGBoost</span>
-                        <span class="skill-bubble">Neural Networks</span>
-                        <span class="skill-bubble">Python</span>
-                    </div>
-                    <ul style="padding-left: 1.5rem;">
-                        <li>🎯 Achieved 95% prediction accuracy using 13-year historical data</li>
-                        <li>📉 Reduced loan defaults by 20% through dynamic risk thresholds</li>
-                        <li>🤖 Implemented neural network ensemble for feature importance analysis</li>
-                    </ul>
-                    
-                </div>
-
-                <!-- Airline Cost Analysis -->
-                <div class="card">
-                    <h3 style="color: var(--primary);">Airline Cost Optimization</h3>
-                    <div style="margin: 1rem 0;">
-                        <span class="skill-bubble">STATA</span>
-                        <span class="skill-bubble">Regression</span>
-                        <span class="skill-bubble">Time Series</span>
-                    </div>
-                    <ul style="padding-left: 1.5rem;">
-                        <li>✈️ Analyzed 14-year operational data using fixed effects modeling</li>
-                        <li>📊 Identified fuel costs as primary driver (p < 0.01 significance)</li>
-                        <li>💡 Proposed strategies reducing operational costs by 12%</li>
-                    </ul>
-                   
-                </div>
-
-                <!-- Game Development -->
-                <div class="card">
-                    <h3 style="color: var(--primary);">Multiplayer Strategy Game</h3>
-                    <div style="margin: 1rem 0;">
-                        <span class="skill-bubble">JavaScript</span>
-                        <span class="skill-bubble">HTML5</span>
-                        <span class="skill-bubble">CSS3</span>
-                    </div>
-                    <ul style="padding-left: 1.5rem;">
-                        <li>🎮 Developed turn-based combat system with AI opponents</li>
-                        <li>⚡ Implemented session persistence using LocalStorage</li>
-                        <li>📱 Created responsive UI with CSS Grid and Flexbox</li>
-                    </ul>
-                  
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section>
-            <h2>Education</h2>
-            <div class="project-grid">
-                <div class="card">
-                    <h3 style="color: var(--primary);">University of Texas at Dallas</h3>
-                    <p style="color: var(--accent);">MS in Business Analytics & AI</p>
-                    <ul style="margin-top: 1rem;">
-                        <li>📅 Jan 2023 - Dec 2024 (Expected)</li>
-                        <li>🏅 GPA: 3.69/4.0</li>
-                        <li>📚 Relevant Coursework: Machine Learning, Cloud Architecture, Big Data Analytics</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3 style="color: var(--primary);">SRM Institute of Science</h3>
-                    <p style="color: var(--accent);">BTech in Mechanical Engineering</p>
-                    <ul style="margin-top: 1rem;">
-                        <li>📅 Jun 2017 - Jul 2021</li>
-                        <li>🏅 GPA: 3.1/4.0</li>
-                        <li>📚 Relevant Coursework: Statistics, Computational Methods, IoT Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- Header Section -->
+  <header>
+    <div class="animate-float">
+      <h1>Geethik Kancharla</h1>
+      <p>Data Wizard | AI Enthusiast | Cloud Certified Professional</p>
     </div>
+    <div class="social-icons" aria-label="Social media links">
+      <a href="https://linkedin.com/in/geethikkancharla/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer style="background: var(--gradient); color: white; text-align: center; padding: 3rem; margin-top: 5rem;">
-        <div style="max-width: 600px; margin: 0 auto;">
-            <h3 style="margin-bottom: 1.5rem;">Let's Connect!</h3>
-            <p style="margin-bottom: 1rem;">
-                📧 geethikkancharla26@gmail.com<br>
-                📱 +1 (469) 432-0036
-            </p>
-            <div class="social-icons">
-                <a href="https://linkedin.com/in/geethikkancharla/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="[GITHUB]" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="[MEDIUM]" target="_blank"><i class="fab fa-medium"></i></a>
-            </div>
-            <p style="margin-top: 2rem; opacity: 0.8;">&copy; 2023 Geethik Kancharla | Data-Driven Solutions Architect</p>
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Skills Section -->
+    <section aria-labelledby="technical-expertise">
+      <h2 id="technical-expertise">Technical Expertise</h2>
+      <article class="card">
+        <div style="margin: 1rem 0;">
+          <span class="skill-bubble">Python</span>
+          <span class="skill-bubble">R</span>
+          <span class="skill-bubble">C</span>
+          <span class="skill-bubble">JavaScript</span>
+          <span class="skill-bubble">HTML</span>
+          <span class="skill-bubble">CSS</span>
+          <span class="skill-bubble">SQL</span>
+          <span class="skill-bubble">MySQL</span>
+          <span class="skill-bubble">MongoDB</span>
+          <span class="skill-bubble">Tableau</span>
+          <span class="skill-bubble">Power BI</span>
+          <span class="skill-bubble">Stata</span>
+          <span class="skill-bubble">SAS</span>
+          <span class="skill-bubble">Microsoft SQL Server</span>
+          <span class="skill-bubble">RedShift</span>
+          <span class="skill-bubble">Azure</span>
+          <span class="skill-bubble">AWS</span>
+          <span class="skill-bubble">Oracle DB</span>
+          <span class="skill-bubble">Jupyter Notebook</span>
+          <span class="skill-bubble">Bootstrap</span>
+          <span class="skill-bubble">Hadoop</span>
+          <span class="skill-bubble">Node.js</span>
+          <span class="skill-bubble">ReactJS</span>
+          <span class="skill-bubble">AngularJS</span>
+          <span class="skill-bubble">RStudio</span>
+          <span class="skill-bubble">XGBoost</span>
+          <span class="skill-bubble">Neural Networks</span>
         </div>
-    </footer>
+        <div style="margin-top: 2rem;">
+          <h3 style="color: var(--primary); margin-bottom: 1rem;">Certifications</h3>
+          <div class="skill-bubble" style="background: var(--primary);">AWS Certified Cloud Practitioner</div>
+          <div class="skill-bubble" style="background: var(--primary);">Microsoft Azure AI Fundamentals</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Professional Experience -->
+    <section aria-labelledby="professional-journey">
+      <h2 id="professional-journey">Professional Journey</h2>
+      <div class="timeline">
+        <!-- ASISTMI Solutions -->
+        <div class="timeline-item card">
+          <h3 style="color: var(--primary);">ASISTMI Solutions Pvt Ltd</h3>
+          <p style="color: var(--accent); margin: 0.5rem 0;">
+            🚀 Data Engineer Intern | Sep 2021 - Aug 2022
+          </p>
+          <ul style="padding-left: 2rem; margin-top: 1rem; list-style: disc;">
+            <li>Executed automation strategies within existing ETL frameworks, identifying 3 major inefficiencies</li>
+            <li>📈 Developed interactive Tableau dashboards reducing manual efforts by 25%</li>
+            <li>⚡ Optimized SQL queries to enhance data retrieval performance by 20%</li>
+            <li>🤝 Collaborated on scalable data solutions improving cross-functional accessibility</li>
+          </ul>
+        </div>
+
+        <!-- GoMechanic -->
+        <div class="timeline-item card">
+          <h3 style="color: var(--primary);">GoMechanic</h3>
+          <p style="color: var(--accent); margin: 0.5rem 0;">
+            📊 Data Analyst Intern | Mar 2021 - May 2021
+          </p>
+          <ul style="padding-left: 2rem; margin-top: 1rem; list-style: disc;">
+            <li>📈 Improved customer retention by 12% through behavior analysis</li>
+            <li>🤖 Automated reporting processes with Power BI, reducing workload by 35%</li>
+            <li>📉 Reduced stock discrepancies by 10% via predictive inventory forecasting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section aria-labelledby="featured-projects">
+      <h2 id="featured-projects">Academic Projects</h2>
+      <div class="project-grid">
+        <!-- COVID-19 -->
+        <article class="card">
+          <h3 style="color: var(--primary);">🌍 WHO COVID-19 Analysis</h3>
+          <div style="margin: 1rem 0;">
+            <span class="skill-bubble">Tableau</span>
+            <span class="skill-bubble">Predictive Modeling</span>
+          </div>
+          <ul style="padding-left: 1.5rem; list-style: disc;">
+            <li>📌 15% improvement in vaccine distribution efficiency</li>
+            <li>⚠️ 20% enhancement in regional preparedness</li>
+            <li>📑 18% increase in resource allocation efficiency</li>
+          </ul>
+        </article>
+
+        <!-- HR Analytics -->
+        <article class="card">
+          <h3 style="color: var(--primary);">👥 IBM HR Analytics</h3>
+          <div style="margin: 1rem 0;">
+            <span class="skill-bubble">SQL</span>
+            <span class="skill-bubble">Workforce Analytics</span>
+          </div>
+          <ul style="padding-left: 1.5rem; list-style: disc;">
+            <li>🎯 90% employee attrition prediction accuracy</li>
+            <li>⏱️ Saved 1+ hour daily on data querying</li>
+            <li>📉 Reduced staff departures through engagement strategies</li>
+          </ul>
+        </article>
+
+        <!-- Credit Risk -->
+        <article class="card">
+          <h3 style="color: var(--primary);">💰 Credit Risk Analysis</h3>
+          <div style="margin: 1rem 0;">
+            <span class="skill-bubble">XGBoost</span>
+            <span class="skill-bubble">Neural Networks</span>
+          </div>
+          <ul style="padding-left: 1.5rem; list-style: disc;">
+            <li>📊 93% loan default prediction accuracy</li>
+            <li>📉 15% reduction in default rates</li>
+            <li>🤖 25% reduction in data preprocessing time</li>
+          </ul>
+        </article>
+
+        <!-- Airlines -->
+        <article class="card">
+          <h3 style="color: var(--primary);">✈️ Airline Cost Analysis</h3>
+          <div style="margin: 1rem 0;">
+            <span class="skill-bubble">STATA</span>
+            <span class="skill-bubble">Statistical Analysis</span>
+          </div>
+          <ul style="padding-left: 1.5rem; list-style: disc;">
+            <li>📉 10% operational cost reduction</li>
+            <li>⛽ Identified fuel cost drivers (p < 0.01)</li>
+            <li>📈 Improved expense-revenue alignment</li>
+          </ul>
+        </article>
+
+        <!-- Game Dev -->
+        <article class="card">
+          <h3 style="color: var(--primary);">🎮 Multiplayer Strategy Game</h3>
+          <div style="margin: 1rem 0;">
+            <span class="skill-bubble">JavaScript</span>
+            <span class="skill-bubble">UI/UX</span>
+          </div>
+          <ul style="padding-left: 1.5rem; list-style: disc;">
+            <li>⚡ Real-time performance optimization</li>
+            <li>🖥️ Interactive UI design</li>
+            <li>📈 Improved player retention</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <div class="project-grid">
+        <article class="card">
+          <h3 style="color: var(--primary);">🎓 University of Texas at Dallas</h3>
+          <p style="color: var(--accent);">MS in Business Analytics & AI</p>
+          <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.2rem;">
+            <li>📅 Jan 2023 - Dec 2024</li>
+            <li>🏅 GPA: 3.694/4.0</li>
+            <li>📚 Machine Learning, Statistics, Big Data, Cloud Fundamentals, Data Visualization</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 style="color: var(--primary);">🎓 SRM Institute</h3>
+          <p style="color: var(--accent);">BTech in Mechanical Engineering</p>
+          <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.2rem;">
+            <li>📅 Jun 2017 - Jul 2021</li>
+            <li>🏅 GPA: 3.1/4.0</li>
+            <li>📚 Statistics, Computational Methods, IoT</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>📬 Let's Connect!</h3>
+    <p>
+      📧 <a href="mailto:geethikkancharla26@gmail.com" style="color: #fff;">geethikkancharla26@gmail.com</a><br />
+      📱 +1 (469) 432-0036
+    </p>
+    <div class="social-icons" aria-label="Social media links">
+      <a href="https://linkedin.com/in/geethikkancharla/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <p style="margin-top: 2rem; opacity: 0.8;">© 2025 Geethik Kancharla | Data-Driven Solutions Architect</p>
+  </footer>
 </body>
 </html>
