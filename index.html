@@ -2,454 +2,716 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Portfolio of Geethik Kancharla - Data Wizard, AI Enthusiast, Cloud Certified Professional" />
-  <meta name="keywords" content="Data Analyst, Machine Learning, Cloud, Portfolio" />
-  <meta name="author" content="Geethik Kancharla" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geethik Kancharla | Data Analyst</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-
+  <meta name="description" content="Geethik Kancharla | Full-Stack & Cloud Developer Portfolio" />
+  <meta name="keywords" content="Java, Spring Boot, React, AWS, Full Stack, Developer, Geethik" />
+  <meta name="author" content="Geethik Kancharla" />
+  <title>Geethik Kancharla | Full-Stack Cloud Developer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
-      --primary: #2A2F4F;
-      --accent: #917FB3;
-      --dark: #1E1E24;
-      --light: #F7F5FB;
-      --gradient: linear-gradient(135deg, #2A2F4F 0%, #917FB3 100%);
-      --transition-speed: 0.4s;
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #8b5cf6;
+      --accent: #ec4899;
+      --light: #f8fafc;
+      --dark: #1e293b;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    
+    html {
+      scroll-behavior: smooth;
     }
-
+    
     body {
-      background: var(--light);
+      font-family: 'Poppins', sans-serif;
       color: var(--dark);
-      line-height: 1.8;
+      background-color: var(--light);
     }
-
-    /* Header / Hero Section */
-    header {
-      background: var(--gradient);
-      color: #fff;
-      padding: 4rem 2rem;
-      text-align: center;
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-      margin-bottom: -50px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.4rem;
-      opacity: 0.9;
-    }
-
-    /* Animate Float for Header Elements */
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-15px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    /* Social Icons in Header */
-    .social-icons {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .social-icons a {
-      color: #fff;
-      font-size: 1.8rem;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .social-icons a:hover,
-    .social-icons a:focus {
-      transform: translateY(-4px) scale(1.1);
-      color: #fff;
-      outline: none;
-    }
-
-    /* Main Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    /* Section Titles (Gradient text) */
-    h2 {
-      font-size: 2.2rem;
-      background: var(--gradient);
+    
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 3rem 0 2rem;
-      position: relative;
-      display: inline-block;
+      background-clip: text;
+      color: transparent;
     }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 50%;
-      height: 3px;
-      background: var(--gradient);
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
-
-    /* Card Styles */
-    .card {
-      background: #fff;
-      border-radius: 15px;
-      padding: 2rem;
-      margin: 1.5rem 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transform: translateY(0);
-      transition: transform var(--transition-speed) cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                  box-shadow var(--transition-speed) ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Skill Bubbles */
-    .skill-bubble {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 30px;
-      margin: 0.4rem 0.4rem 0 0;
-      font-size: 0.9rem;
+    
+    .hover-grow {
       transition: all 0.3s ease;
     }
-
-    .skill-bubble:hover {
-      background: var(--primary);
+    
+    .hover-grow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-pill {
+      transition: all 0.3s ease;
+    }
+    
+    .skill-pill:hover {
       transform: scale(1.05);
-      cursor: pointer;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
     }
-
-    /* Timeline */
-    .timeline {
+    
+    .nav-link {
       position: relative;
-      padding-left: 40px;
-      border-left: 3px solid var(--accent);
-      margin-bottom: 2rem;
     }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 3rem;
-      padding-left: 30px;
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
     }
-
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+    }
+    
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -42px;
-      top: 10px;
-      width: 18px;
-      height: 18px;
-      background: var(--accent);
-      border: 3px solid #fff;
+      left: -38px;
+      top: 0;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border: 3px solid white;
+      box-shadow: 0 0 0 4px var(--primary);
     }
-
-    /* Project Grid */
-    .project-grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 24px;
+      width: 2px;
+      height: calc(100% - 24px);
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
     }
-
-    /* Footer */
-    footer {
-      background: var(--gradient);
-      color: #fff;
-      text-align: center;
-      padding: 3rem 2rem;
-      margin-top: 4rem;
+    
+    .project-card {
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05),
+                  -5px -5px 15px rgba(255, 255, 255, 0.8);
     }
-
-    footer h3 {
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+    
+    .project-card:hover .project-title {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-
-    footer p {
-      margin-bottom: 1rem;
-    }
-
-    footer .social-icons {
-      margin: 1rem 0 2rem;
-      gap: 1.5rem;
-    }
-
-    footer .social-icons a {
-      color: #fff;
-      font-size: 1.5rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    footer .social-icons a:hover,
-    footer .social-icons a:focus {
-      color: #f1f1f1;
-      transform: translateY(-4px);
-    }
-
-    /* Responsive Typography */
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1.2rem;
-      }
-      h2 {
-        font-size: 2rem;
-      }
-    }
+    
+   /* .input-field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    } */
   </style>
 </head>
-
-<body>
-  <!-- Header Section -->
-  <header>
-    <div class="animate-float">
-      <h1>Geethik Kancharla</h1>
-      <p>Data Wizard | AI Enthusiast | Cloud Certified Professional</p>
-    </div>
-    <div class="social-icons" aria-label="Social media links">
-      <a href="https://linkedin.com/in/geethikkancharla/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
+<body class="antialiased">
+  <!-- Navigation Bar -->
+  <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-bold">
+        <span class="gradient-text">Geethik Kancharla</span>
       </a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link text-gray-700 font-medium hover:text-indigo-600">About</a>
+        <a href="#skills" class="nav-link text-gray-700 font-medium hover:text-indigo-600">Skills</a>
+        <a href="#experience" class="nav-link text-gray-700 font-medium hover:text-indigo-600">Experience</a>
+        <a href="#projects" class="nav-link text-gray-700 font-medium hover:text-indigo-600">Projects</a>
+        <a href="#contact" class="nav-link text-gray-700 font-medium hover:text-indigo-600">Contact</a>
+      </nav>
+      <button class="md:hidden text-gray-700">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="container">
-    <!-- Skills Section -->
-    <section aria-labelledby="technical-expertise">
-      <h2 id="technical-expertise">Technical Expertise</h2>
-      <article class="card">
-        <div style="margin: 1rem 0;">
-          <span class="skill-bubble">Python</span>
-          <span class="skill-bubble">R</span>
-          <span class="skill-bubble">C</span>
-          <span class="skill-bubble">JavaScript</span>
-          <span class="skill-bubble">HTML</span>
-          <span class="skill-bubble">CSS</span>
-          <span class="skill-bubble">SQL</span>
-          <span class="skill-bubble">MySQL</span>
-          <span class="skill-bubble">MongoDB</span>
-          <span class="skill-bubble">Tableau</span>
-          <span class="skill-bubble">Power BI</span>
-          <span class="skill-bubble">Stata</span>
-          <span class="skill-bubble">SAS</span>
-          <span class="skill-bubble">Microsoft SQL Server</span>
-          <span class="skill-bubble">RedShift</span>
-          <span class="skill-bubble">Azure</span>
-          <span class="skill-bubble">AWS</span>
-          <span class="skill-bubble">Oracle DB</span>
-          <span class="skill-bubble">Jupyter Notebook</span>
-          <span class="skill-bubble">Bootstrap</span>
-          <span class="skill-bubble">Hadoop</span>
-          <span class="skill-bubble">Node.js</span>
-          <span class="skill-bubble">ReactJS</span>
-          <span class="skill-bubble">AngularJS</span>
-          <span class="skill-bubble">RStudio</span>
-          <span class="skill-bubble">XGBoost</span>
-          <span class="skill-bubble">Neural Networks</span>
-        </div>
-        <div style="margin-top: 2rem;">
-          <h3 style="color: var(--primary); margin-bottom: 1rem;">Certifications</h3>
-          <div class="skill-bubble" style="background: var(--primary);">AWS Certified Cloud Practitioner</div>
-          <div class="skill-bubble" style="background: var(--primary);">Microsoft Azure AI Fundamentals</div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Professional Experience -->
-    <section aria-labelledby="professional-journey">
-      <h2 id="professional-journey">Professional Journey</h2>
-      <div class="timeline">
-        <!-- ASISTMI Solutions -->
-        <div class="timeline-item card">
-          <h3 style="color: var(--primary);">ASISTMI Solutions Pvt Ltd</h3>
-          <p style="color: var(--accent); margin: 0.5rem 0;">
-            🚀 Data Engineer Intern | Sep 2021 - Aug 2022
-          </p>
-          <ul style="padding-left: 2rem; margin-top: 1rem; list-style: disc;">
-            <li>Executed automation strategies within existing ETL frameworks, identifying 3 major inefficiencies</li>
-            <li>📈 Developed interactive Tableau dashboards reducing manual efforts by 25%</li>
-            <li>⚡ Optimized SQL queries to enhance data retrieval performance by 20%</li>
-            <li>🤝 Collaborated on scalable data solutions improving cross-functional accessibility</li>
-          </ul>
-        </div>
-
-        <!-- GoMechanic -->
-        <div class="timeline-item card">
-          <h3 style="color: var(--primary);">GoMechanic</h3>
-          <p style="color: var(--accent); margin: 0.5rem 0;">
-            📊 Data Analyst Intern | Mar 2021 - May 2021
-          </p>
-          <ul style="padding-left: 2rem; margin-top: 1rem; list-style: disc;">
-            <li>📈 Improved customer retention by 12% through behavior analysis</li>
-            <li>🤖 Automated reporting processes with Power BI, reducing workload by 35%</li>
-            <li>📉 Reduced stock discrepancies by 10% via predictive inventory forecasting</li>
-          </ul>
-        </div>
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 to-purple-800 text-white pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center" data-aos="fade-up">
+      <div class="inline-block mb-6 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+        <span class="text-sm font-medium">Full-Stack & Cloud Developer</span>
       </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section aria-labelledby="featured-projects">
-      <h2 id="featured-projects">Academic Projects</h2>
-      <div class="project-grid">
-        <!-- COVID-19 -->
-        <article class="card">
-          <h3 style="color: var(--primary);">🌍 WHO COVID-19 Analysis</h3>
-          <div style="margin: 1rem 0;">
-            <span class="skill-bubble">Tableau</span>
-            <span class="skill-bubble">Predictive Modeling</span>
-          </div>
-          <ul style="padding-left: 1.5rem; list-style: disc;">
-            <li>📌 15% improvement in vaccine distribution efficiency</li>
-            <li>⚠️ 20% enhancement in regional preparedness</li>
-            <li>📑 18% increase in resource allocation efficiency</li>
-          </ul>
-        </article>
-
-        <!-- HR Analytics -->
-        <article class="card">
-          <h3 style="color: var(--primary);">👥 IBM HR Analytics</h3>
-          <div style="margin: 1rem 0;">
-            <span class="skill-bubble">SQL</span>
-            <span class="skill-bubble">Workforce Analytics</span>
-          </div>
-          <ul style="padding-left: 1.5rem; list-style: disc;">
-            <li>🎯 90% employee attrition prediction accuracy</li>
-            <li>⏱️ Saved 1+ hour daily on data querying</li>
-            <li>📉 Reduced staff departures through engagement strategies</li>
-          </ul>
-        </article>
-
-        <!-- Credit Risk -->
-        <article class="card">
-          <h3 style="color: var(--primary);">💰 Credit Risk Analysis</h3>
-          <div style="margin: 1rem 0;">
-            <span class="skill-bubble">XGBoost</span>
-            <span class="skill-bubble">Neural Networks</span>
-          </div>
-          <ul style="padding-left: 1.5rem; list-style: disc;">
-            <li>📊 93% loan default prediction accuracy</li>
-            <li>📉 15% reduction in default rates</li>
-            <li>🤖 25% reduction in data preprocessing time</li>
-          </ul>
-        </article>
-
-        <!-- Airlines -->
-        <article class="card">
-          <h3 style="color: var(--primary);">✈️ Airline Cost Analysis</h3>
-          <div style="margin: 1rem 0;">
-            <span class="skill-bubble">STATA</span>
-            <span class="skill-bubble">Statistical Analysis</span>
-          </div>
-          <ul style="padding-left: 1.5rem; list-style: disc;">
-            <li>📉 10% operational cost reduction</li>
-            <li>⛽ Identified fuel cost drivers (p < 0.01)</li>
-            <li>📈 Improved expense-revenue alignment</li>
-          </ul>
-        </article>
-
-        <!-- Game Dev -->
-        <article class="card">
-          <h3 style="color: var(--primary);">🎮 Multiplayer Strategy Game</h3>
-          <div style="margin: 1rem 0;">
-            <span class="skill-bubble">JavaScript</span>
-            <span class="skill-bubble">UI/UX</span>
-          </div>
-          <ul style="padding-left: 1.5rem; list-style: disc;">
-            <li>⚡ Real-time performance optimization</li>
-            <li>🖥️ Interactive UI design</li>
-            <li>📈 Improved player retention</li>
-          </ul>
-        </article>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        Hi, I'm <span class="gradient-text">Geethik</span>
+      </h1>
+      <p class="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto opacity-90">
+        I build scalable web applications and cloud solutions with modern technologies
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#contact" class="btn-primary px-8 py-3 rounded-full font-medium text-white">
+          Get In Touch
+        </a>
+        <a href="#projects" class="px-8 py-3 rounded-full font-medium border-2 border-white/20 hover:border-white/40 transition">
+          View My Work
+        </a>
       </div>
-    </section>
-
-    <!-- Education -->
-    <section aria-labelledby="education">
-      <h2 id="education">Education</h2>
-      <div class="project-grid">
-        <article class="card">
-          <h3 style="color: var(--primary);">🎓 University of Texas at Dallas</h3>
-          <p style="color: var(--accent);">MS in Business Analytics & AI</p>
-          <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.2rem;">
-            <li>📅 Jan 2023 - Dec 2024</li>
-            <li>🏅 GPA: 3.694/4.0</li>
-            <li>📚 Machine Learning, Statistics, Big Data, Cloud Fundamentals, Data Visualization</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3 style="color: var(--primary);">🎓 SRM Institute</h3>
-          <p style="color: var(--accent);">BTech in Mechanical Engineering</p>
-          <ul style="margin-top: 1rem; list-style: disc; padding-left: 1.2rem;">
-            <li>📅 Jun 2017 - Jul 2021</li>
-            <li>🏅 GPA: 3.1/4.0</li>
-            <li>📚 Statistics, Computational Methods, IoT</li>
-          </ul>
-        </article>
+      <div class="mt-16 flex justify-center space-x-6">
+        <a href="https://linkedin.com/in/kancharlag" target="_blank" class="text-white hover:text-indigo-200 transition">
+          <i class="fab fa-linkedin-in text-2xl"></i>
+        </a>
+      <!-- <a href="https://github.com/yourusername" target="_blank" class="text-white hover:text-indigo-200 transition">
+          <i class="fab fa-github text-2xl"></i>
+        </a> -->
+        
+        <a href="mailto:geethikk99@gmail.com" class="text-white hover:text-indigo-200 transition">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <h3>📬 Let's Connect!</h3>
-    <p>
-      📧 <a href="mailto:geethikkancharla26@gmail.com" style="color: #fff;">geethikkancharla26@gmail.com</a><br />
-      📱 +1 (469) 432-0036
-    </p>
-    <div class="social-icons" aria-label="Social media links">
-      <a href="https://linkedin.com/in/geethikkancharla/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
     </div>
-    <p style="margin-top: 2rem; opacity: 0.8;">© 2025 Geethik Kancharla | Data-Driven Solutions Architect</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+              <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                   alt="Geethik Kancharla" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+              <div class="text-3xl font-bold text-indigo-600">3+</div>
+              <div class="text-sm text-gray-600">Years Experience</div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            About <span class="gradient-text">Me</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            I'm a passionate Full-Stack Developer with expertise in building scalable web applications using Java, Spring Boot, React, and cloud technologies. With over 3 years of professional experience, I specialize in creating efficient, maintainable solutions that solve real-world problems.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or hiking in nature. I believe in continuous learning and staying updated with the latest industry trends.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex items-center">
+              <div class="mr-3 text-indigo-600">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-500">Location</div>
+                <div class="font-medium">Atlanta, GA</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3 text-indigo-600">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-500">Email</div>
+                <div class="font-medium">geethikk99@gmail.com</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3 text-indigo-600">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-500">Phone</div>
+                <div class="font-medium">+1 (678) 435-9774</div>
+              </div>
+            </div>
+          </div>
+        <!--- <a href="" class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+            Download Resume
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          My <span class="gradient-text">Skills</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          I've worked with a variety of technologies in the web development world. Here are a few I'm proficient in:
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+        <!-- Frontend Skills -->
+        <div class="glass-card p-8 rounded-xl hover-grow">
+          <div class="text-indigo-600 mb-4">
+            <i class="fas fa-laptop-code text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">React.js</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Angular</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">JavaScript</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">TypeScript</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Tailwind CSS</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">HTML5</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">CSS3</span>
+          </div>
+        </div>
+        
+        <!-- Backend Skills -->
+        <div class="glass-card p-8 rounded-xl hover-grow">
+          <div class="text-indigo-600 mb-4">
+            <i class="fas fa-server text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Java</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Spring Boot</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Python</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Node.js</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">REST APIs</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">GraphQL</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">MySQL</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">MongoDB</span>
+          </div>
+        </div>
+        
+        <!-- DevOps & Cloud -->
+        <div class="glass-card p-8 rounded-xl hover-grow">
+          <div class="text-indigo-600 mb-4">
+            <i class="fas fa-cloud text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">DevOps & Cloud</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">AWS</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Azure</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Docker</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Kubernetes</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Terraform</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">CI/CD</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">GitLab</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Prometheus</span>
+            <span class="skill-pill bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Work <span class="gradient-text">Experience</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          My professional journey and the companies I've worked with
+        </p>
+      </div>
+      
+      <div class="relative max-w-3xl mx-auto">
+        <!-- Timeline -->
+        <div class="space-y-12">
+          <!-- Horizon Softech -->
+          <div class="timeline-item relative pl-16" data-aos="fade-up">
+            <div class="project-card p-8 rounded-xl">
+              <div class="flex flex-col sm:flex-row justify-between mb-4">
+                <h3 class="text-xl font-bold text-indigo-700">Software Engineer</h3>
+                <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full">
+                  Aug 2024 – Present
+                </div>
+              </div>
+              <h4 class="text-lg font-semibold mb-4">Horizon Softech</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Built scalable microservices with Spring Boot and Java 17, improving system performance by 40%</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Automated AWS S3 file processing workflows using Lambda functions, reducing manual effort by 90%</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Reduced page load times by 80% through Redis caching and React optimization techniques</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Implemented CI/CD pipelines using GitLab, Docker, and Kubernetes, decreasing deployment times by 70%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Deloitte -->
+          <div class="timeline-item relative pl-16" data-aos="fade-up">
+            <div class="project-card p-8 rounded-xl">
+              <div class="flex flex-col sm:flex-row justify-between mb-4">
+                <h3 class="text-xl font-bold text-indigo-700">Software Development Engineer</h3>
+                <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full">
+                  Jan 2021 – Dec 2022
+                </div>
+              </div>
+              <h4 class="text-lg font-semibold mb-4">Deloitte</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Rebuilt REST APIs using Spring Boot and MongoDB, increasing throughput by 35%</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Enhanced UI consistency and performance with React and jQuery, improving user satisfaction scores by 25%</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Boosted data processing efficiency by 35% through optimized SQL queries and indexing strategies</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Integrated Log4j and Splunk for effective error tracking, reducing troubleshooting time by 50%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Deloitte Internship -->
+          <div class="timeline-item relative pl-16" data-aos="fade-up">
+            <div class="project-card p-8 rounded-xl">
+              <div class="flex flex-col sm:flex-row justify-between mb-4">
+                <h3 class="text-xl font-bold text-indigo-700">SDE Intern</h3>
+                <div class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full">
+                  Apr 2020 – Dec 2020
+                </div>
+              </div>
+              <h4 class="text-lg font-semibold mb-4">Deloitte</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Developed RESTful APIs in Java Spring Boot for internal applications</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Contributed to internal dashboards using React.js, improving data visibility</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+                  <span>Improved system reliability through caching implementation and robust error handling</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Here are some of my recent projects that showcase my skills and expertise
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up">
+        <!-- Project 1 -->
+        <div class="project-card rounded-xl overflow-hidden hover-grow">
+          <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center">
+            <i class="fas fa-chart-line text-white text-6xl"></i>
+          </div>
+          <div class="p-8">
+            <h3 class="project-title text-2xl font-bold mb-3 transition">Credit Risk Analysis System</h3>
+            <p class="text-gray-600 mb-4">
+              Developed a machine learning system to predict credit default risk with 94.7% accuracy using AWS SageMaker, XGBoost, and TensorFlow.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">AWS</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Python</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Machine Learning</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Docker</span>
+            </div>
+            <!--<div class="flex space-x-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-800 font-medium flex items-center">
+                <i class="fab fa-github mr-2"></i> View Code
+              </a>
+            </div> -->
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card rounded-xl overflow-hidden hover-grow">
+          <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+            <i class="fas fa-map-marked-alt text-white text-6xl"></i>
+          </div>
+          <div class="p-8">
+            <h3 class="project-title text-2xl font-bold mb-3 transition">Location-Based Microservices</h3>
+            <p class="text-gray-600 mb-4">
+              Designed and implemented a scalable location API system with Spring Boot and MongoDB, featuring containerized logging and monitoring.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Spring Boot</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">MongoDB</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Docker</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Kubernetes</span>
+            </div>
+           <!--<div class="flex space-x-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-800 font-medium flex items-center">
+                <i class="fab fa-github mr-2"></i> View Code
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="text-center mt-12" data-aos="fade-up">
+        <a href="#" class="inline-flex items-center px-6 py-3 border border-indigo-600 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white transition">
+          View All Projects
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Education Section -->
+<section id="education" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <span class="gradient-text">Education</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        My academic background and certifications
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- University Education -->
+      <div class="project-card p-8 rounded-xl hover-grow" data-aos="fade-up">
+        <div class="flex items-start mb-6">
+          <div class="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+            <i class="fas fa-university text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-indigo-700">Master's in Business Analytics and Artificial Intelligence</h3>
+            <p class="text-gray-600">University of Texas at Dallas</p>
+            <p class="text-sm text-gray-500">2023 - 2024</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+            <span>Specialization in Cloud Computing, Artificial Intelligence and Data Analysis </span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+            <span>GPA: 3.694/4.0</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <!-- Bachelor's Degree -->
+      <div class="project-card p-8 rounded-xl hover-grow" data-aos="fade-up">
+        <div class="flex items-start mb-6">
+          <div class="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+            <i class="fas fa-graduation-cap text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-indigo-700">Bachelor's in Mechanical Engineering</h3>
+            <p class="text-gray-600">SRM University</p>
+            <p class="text-sm text-gray-500">2017 - 2021</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+            <span>Final Year Project: "IOT based Disinfect System"</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
+            <span>GPA: 3.2/4.0</span>
+          </li>
+         
+        </ul>
+      </div>
+      
+      <!-- Certifications -->
+      <div class="project-card p-8 rounded-xl hover-grow md:col-span-2" data-aos="fade-up">
+        <div class="flex items-start mb-6">
+          <div class="flex-shrink-0 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+            <i class="fas fa-certificate text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-indigo-700">Certifications</h3>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-2">AWS Certified: Cloud Practioner </h4>
+            <p class="text-sm text-gray-600">Amazon Web Services, 2024</p>
+          </div>
+         
+          <div>
+            <h4 class="font-semibold text-gray-800 mb-2">Microsoft Certified: Azure AI Fundamentals</h4>
+            <p class="text-sm text-gray-600">Microsoft, 2023</p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Get In <span class="gradient-text">Touch</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Feel free to reach out through any of these channels
+        </p>
+      </div>
+      
+      <div class="max-w-md mx-auto" data-aos="fade-up">
+        <div class="glass-card p-8 rounded-xl">
+          <h3 class="text-xl font-bold mb-6 text-indigo-700">Contact Information</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-medium text-gray-500">Email</h4>
+                <a href="mailto:geethikk99@gmail.com" class="text-gray-700 hover:text-indigo-600">geethikk99@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-medium text-gray-500">Phone</h4>
+                <a href="tel:+16784359774" class="text-gray-700 hover:text-indigo-600">+1 (678) 435-9774</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-medium text-gray-500">Location</h4>
+                <p class="text-gray-700">Atlanta, Georgia, USA</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8">
+            <h4 class="text-sm font-medium text-gray-500 mb-4">Follow Me</h4>
+            <div class="flex justify-center space-x-4">
+              <a href="https://linkedin.com/in/kancharlag" target="_blank" class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:geethikk99@gmail.com"  target="_blank" class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+                <i class="fas fa-envelope text-xl"></i>
+              </a>
+            <!--   <a href="https://twitter.com/yourusername" target="_blank" class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+                <i class="fab fa-twitter"></i>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h2 class="text-2xl font-bold gradient-text">Geethik Kancharla</h2>
+          <p class="mt-2 text-indigo-200">Full-Stack & Cloud Developer</p>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-end">
+          <div class="flex space-x-6 mb-4">
+            <a href="https://linkedin.com/in/kancharlag" target="_blank" class="text-indigo-200 hover:text-white transition">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+         <!--   <a href="https://github.com/yourusername" target="_blank" class="text-indigo-200 hover:text-white transition">
+              <i class="fab fa-github text-xl"></i>
+            </a> -->
+            <a href="mailto:geethikk99@gmail.com" class="text-indigo-200 hover:text-white transition">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+          </div>
+          <p class="text-sm text-indigo-300">© 2025 Geethik Kancharla. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
