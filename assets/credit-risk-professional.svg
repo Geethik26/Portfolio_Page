@@ -1,0 +1,53 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#EEF2F7"/>
+  <rect x="56" y="56" width="1488" height="888" rx="36" fill="#FBFCFE" stroke="#D7E0EA" stroke-width="4"/>
+
+  <rect x="108" y="108" width="1384" height="98" rx="26" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="3"/>
+  <text x="152" y="171" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#0F172A">Credit Risk Analysis</text>
+  <text x="608" y="171" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#475569">Capstone | SageMaker | XGBoost | Docker | Kubernetes</text>
+
+  <rect x="108" y="244" width="780" height="592" rx="30" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="3"/>
+  <text x="152" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#475569">Model Performance</text>
+  <rect x="152" y="336" width="692" height="236" rx="28" fill="#F8FAFC"/>
+  <path d="M192 514C242 486 284 422 334 430C384 438 426 334 480 352C534 370 578 438 634 398C690 358 736 236 804 230" stroke="#0F766E" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="192" y1="526" x2="804" y2="526" stroke="#CBD5E1" stroke-width="4"/>
+  <line x1="192" y1="526" x2="192" y2="374" stroke="#CBD5E1" stroke-width="4"/>
+  <circle cx="804" cy="230" r="16" fill="#0F766E"/>
+
+  <rect x="152" y="604" width="332" height="188" rx="24" fill="#0F172A"/>
+  <text x="188" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">Key outcomes</text>
+  <text x="188" y="712" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="700" fill="#F8FAFC">0.947</text>
+  <text x="188" y="754" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#CBD5E1">AUC on SageMaker fraud workflow</text>
+
+  <rect x="512" y="604" width="332" height="188" rx="24" fill="#F8FAFC" stroke="#DCE4EE" stroke-width="3"/>
+  <text x="548" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">Production scope</text>
+  <text x="548" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700" fill="#1D4ED8">5M+</text>
+  <text x="548" y="750" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#475569">records processed across training and inference experiments</text>
+
+  <rect x="924" y="244" width="568" height="592" rx="30" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="3"/>
+  <text x="968" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#475569">Explainability and deployment</text>
+  <rect x="968" y="336" width="480" height="178" rx="24" fill="#F8FAFC" stroke="#DCE4EE" stroke-width="3"/>
+  <text x="1004" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">Top feature contributions</text>
+  <text x="1004" y="430" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#475569">Transaction velocity</text>
+  <rect x="1200" y="412" width="208" height="18" rx="9" fill="#DBEAFE"/>
+  <rect x="1200" y="412" width="172" height="18" rx="9" fill="#2563EB"/>
+  <text x="1004" y="470" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#475569">Refund history</text>
+  <rect x="1200" y="452" width="208" height="18" rx="9" fill="#FDE68A"/>
+  <rect x="1200" y="452" width="148" height="18" rx="9" fill="#F59E0B"/>
+  <text x="1004" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#475569">Device behavior</text>
+  <rect x="1200" y="492" width="208" height="18" rx="9" fill="#D1FAE5"/>
+  <rect x="1200" y="492" width="136" height="18" rx="9" fill="#10B981"/>
+
+  <rect x="968" y="548" width="480" height="244" rx="24" fill="#0F172A"/>
+  <text x="1004" y="602" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">System design</text>
+  <rect x="1004" y="630" width="128" height="56" rx="18" fill="#1D4ED8"/>
+  <text x="1036" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">ETL</text>
+  <rect x="1160" y="630" width="128" height="56" rx="18" fill="#0F766E"/>
+  <text x="1181" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#F8FAFC">Training</text>
+  <rect x="1316" y="630" width="96" height="56" rx="18" fill="#F59E0B"/>
+  <text x="1336" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#111827">K8s</text>
+  <line x1="1132" y1="658" x2="1160" y2="658" stroke="#64748B" stroke-width="4"/>
+  <line x1="1288" y1="658" x2="1316" y2="658" stroke="#64748B" stroke-width="4"/>
+  <text x="1004" y="726" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#CBD5E1">SHAP explainability, model registry, autoscaling inference,</text>
+  <text x="1004" y="760" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#CBD5E1">and reproducible training runs built for production-style evaluation.</text>
+</svg>
