@@ -124,35 +124,72 @@
           <article class="info-panel reveal-up">
             <p class="info-heading">Florida Blue</p>
             <h3>Software Engineer</h3>
-            <p>Built Spring Boot microservices on GKE for claims, eligibility, reimbursement, and member payment workflows.</p>
+            <p class="info-meta">Aug 2024 - Present · Jacksonville, FL</p>
+            <ul class="info-list">
+              <li>Built and maintained Spring Boot microservices on GKE for claims, eligibility, reimbursement, prior-authorization, and member-account workflows running in production.</li>
+              <li>Replaced a 4-hour polling process with a near-real-time Python Dataflow and Pub/Sub pipeline processing about 300K daily claim events at under 800 ms end-to-end latency.</li>
+              <li>Improved release velocity and reliability by building CI/CD across 6 Java repositories and instrumenting 4 services with OpenTelemetry and Cloud Trace for faster production triage.</li>
+            </ul>
             <div class="mini-metrics">
               <span>300K daily events</span>
               <span>&lt;800ms latency</span>
+              <span>6 repos in CI/CD</span>
               <span>40% faster CI builds</span>
+              <span>25% lower MTTR</span>
             </div>
           </article>
 
           <article class="info-panel reveal-up">
             <p class="info-heading">Apollo Hospitals</p>
             <h3>Software Engineer</h3>
-            <p>Migrated legacy hospital systems into Java microservices and built Spark ETL pipelines for analytics and billing operations.</p>
+            <p class="info-meta">Jan 2021 - Dec 2022 · Bengaluru, India</p>
+            <ul class="info-list">
+              <li>Migrated 3 legacy modules into Java Spring Boot microservices with Kubernetes readiness checks and staged rollouts, improving release cadence from quarterly to bi-weekly.</li>
+              <li>Built Apache Spark ETL pipelines processing about 2M patient records nightly and improved data freshness from T+24 hours to T+4 hours.</li>
+              <li>Implemented gRPC communication, OpenAPI contracts, retries, and dead-letter handling to reduce integration errors and make billing and settlement workflows more resilient.</li>
+            </ul>
             <div class="mini-metrics">
               <span>2M nightly records</span>
+              <span>3 legacy modules migrated</span>
               <span>gRPC service contracts</span>
               <span>Bi-weekly releases</span>
+              <span>30% fewer integration errors</span>
+            </div>
+          </article>
+
+          <article class="info-panel reveal-up">
+            <p class="info-heading">Flipkart</p>
+            <h3>Software Development Engineer</h3>
+            <p class="info-meta">Apr 2020 - Dec 2020 · Bengaluru, India</p>
+            <ul class="info-list">
+              <li>Supported backend services for product catalog, order processing, and inventory workflows during high-traffic commerce events.</li>
+              <li>Built serverless AWS workflows using Lambda, SQS, DynamoDB, and S3 to process asynchronous order and notification events.</li>
+              <li>Improved reliability through production debugging, service performance tuning, and expanded automated test coverage from 60% to 85%.</li>
+            </ul>
+            <div class="mini-metrics">
+              <span>AWS event workflows</span>
+              <span>High-traffic commerce</span>
+              <span>60% to 85% test coverage</span>
             </div>
           </article>
 
           <article class="info-panel reveal-up">
             <p class="info-heading">Core Stack</p>
-            <h3>Tools I work in</h3>
-            <p>Java, Python, TypeScript, SQL, Spring Boot, GKE, Dataflow, Pub/Sub, SageMaker, Docker, Kubernetes, OpenTelemetry, Jenkins, GitHub Actions.</p>
+            <h3>Systems I build with</h3>
+            <p>Java, Python, TypeScript, SQL, Spring Boot, REST APIs, gRPC, GKE, Dataflow, Pub/Sub, Spark, SageMaker, Docker, Kubernetes, OpenTelemetry, Jenkins, and GitHub Actions.</p>
           </article>
 
           <article class="info-panel reveal-up">
             <p class="info-heading">Education</p>
             <h3>UT Dallas</h3>
+            <p class="info-meta">Jan 2023 - Dec 2024 · Richardson, TX</p>
             <p>Master of Science in Business Analytics and Artificial Intelligence with computer science principles. GPA 3.694 / 4.0.</p>
+          </article>
+
+          <article class="info-panel reveal-up">
+            <p class="info-heading">Focus</p>
+            <h3>Backend + Cloud + AI Workflows</h3>
+            <p>I build production systems that balance latency, correctness, maintainability, and operational stability across healthcare, billing, payments, and AI-assisted internal tools.</p>
           </article>
         </div>
       </div>
